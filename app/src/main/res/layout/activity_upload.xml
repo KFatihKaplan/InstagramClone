@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/imageview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.UploadActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="287dp"
+        android:layout_height="308dp"
+        android:layout_marginTop="24dp"
+        android:onClick="SelectImage"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image" />
+
+    <EditText
+        android:id="@+id/commentText"
+        android:layout_width="282dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Comment"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="70dp"
+        android:onClick="upload"
+        android:text="Post"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <ProgressBar
+        android:id="@+id/loading"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"></ProgressBar>
+</androidx.constraintlayout.widget.ConstraintLayout>
